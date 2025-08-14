@@ -1,8 +1,11 @@
+import AppProviders from "./main/AppProvider";
+import { MainRouter } from "./main/router/MainRouter";
+
 function App() {
   return (
-    <>
-      <div></div>
-    </>
+    <AppProviders>
+      <MainRouter />
+    </AppProviders>
   );
 }
 
