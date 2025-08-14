@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router";
 import { Layout } from "../Layout";
 import { paths } from "./paths";
+import { HomePage } from "../../features/HomePage";
 
 const { todos } = paths;
 
@@ -9,14 +10,7 @@ export const MainRouter: React.FC = () => (
   <BrowserRouter>
     <Routes>
       <Route element={<Layout />}>
-        <Route
-          index
-          element={
-            <>
-              <h1>Welcome to Suma</h1>
-            </>
-          }
-        />
+        <Route index element={<HomePage />} />
         <Route
           path={todos.list}
           element={
