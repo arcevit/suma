@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import { Layout } from "../Layout";
 import { paths } from "./paths";
 import { HomePage } from "../../features/HomePage";
+import { TodosPage } from "../../features/todo/pages/Todos";
 
 const { todos } = paths;
 
@@ -11,14 +12,7 @@ export const MainRouter: React.FC = () => (
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<HomePage />} />
-        <Route
-          path={todos.list}
-          element={
-            <>
-              <h1>Todo List</h1>
-            </>
-          }
-        />
+        <Route path={todos.list} element={<TodosPage />} />
         <Route
           path={todos.detail(":todoId")}
           element={
