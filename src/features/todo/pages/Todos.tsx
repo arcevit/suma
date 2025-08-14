@@ -11,6 +11,7 @@ import { paths } from "../../../main/router/paths";
 import { useQueryClient } from "@tanstack/react-query";
 import { todoConfig } from "../config/config";
 import type { ITodo } from "../models/todo";
+import { AddTodo } from "../components/AddTodo";
 
 const {
   todos: { detail: detailPath },
@@ -35,6 +36,7 @@ export const TodosPage = () => {
     <>
       <H1 text={"Todo list"} />
       <div className="mx-auto max-w-4xl pt-5">
+        <AddTodo />
         <List>
           {todos.map((todo) => (
             <ListItem key={todo.id}>
